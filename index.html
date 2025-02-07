@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Fácil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <!-- Logo e título -->
+                <div class="logo">
+                    <img src="css/img/LogoDouradoVideos.webp" alt="Logo" class="logo-img">
+                    <h1 class="text-white">Dourado Vídeos</h1>
+                </div>
+                
+                <!-- Ícone do menu hambúrguer para telas pequenas -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Itens do menu -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Tutoriais</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Download Fácil</h1>
+        <p>Insira o link do vídeo abaixo para fazer o download:</p>
+
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div>
+        </div>
+
+        <form action="download.php" method="POST">
+            <input type="url" name="video_url" placeholder="Cole o link do vídeo aqui..." required>
+            <div class="botoes">
+                <button type="submit" name="format" value="mp3">Download MP3</button>
+                <button type="submit" name="format" value="mp4">Download MP4</button>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Dourado Vídeos. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
